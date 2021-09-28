@@ -1,0 +1,143 @@
+.desc {
+  min-height: 753px;
+  background-image: url('/src/img/bgs/desc-bg.png');
+
+  @media (max-width: 1060px) {
+    min-height: auto;
+    padding-bottom: 30px;
+  }
+}
+
+.desc__title {
+  padding-top: 52px;
+  @include max-width(860px);
+  margin-bottom: 47px;
+  font-family: 'Museo';
+  font-weight: 900;
+  font-size: 40px;
+  color: $blue;
+  position: relative;
+  text-transform: uppercase;
+
+  @media (max-width: 767px) {
+    font-size: 30px;
+    padding-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 20px;
+    padding-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  &::after {
+    content: url('/src/img/desc-photo.png');
+    position: absolute;
+    top: -90px;
+    right: -700px;
+    z-index: -1;
+
+    @media (max-width: 1300px) {
+      top: -30px;
+    }
+
+    @media (max-width: 1060px) {
+      content: none;
+    }
+  }
+
+  span {
+    color: $red;
+  }
+}
+
+.desc__text {
+  font-size: 30px;
+  @include max-width(756px);
+  margin-bottom: 48px;
+
+  @media (max-width: 767px) {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  span {
+    font-weight: 700;
+    color: $red;
+  }
+}
+
+.desc__list {
+  @include reset-list;
+  display: flex;
+  gap: 60px;
+
+  @media (max-width: 767px) {
+    gap: 20px;
+    flex-direction: column;
+  }
+}
+
+.desc__item {
+  padding-left: 50px;
+  @include max-width(380px);
+  position: relative;
+
+  @media (max-width: 767px) {
+    max-width: 100%;
+  }
+
+  &:first-child {
+    @include max-width(312px);
+
+    @media (max-width: 767px) {
+      max-width: 100%;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+  }
+
+  @for $i from 1 through 2 {
+    &:nth-child(#{$i})::before {
+      content: url('/src/img/icons/desc/#{$i}.png');
+    }
+  }
+}
+
+.desc__item-title {
+  text-transform: uppercase;
+  font-family: 'Museo';
+  font-weight: 900;
+  color: $blue;
+  font-size: 18px;
+  margin-bottom: 15px;
+
+  @media (max-width: 767px) {
+    br {
+      display: none;
+    }
+    margin-bottom: 5px;
+  }
+}
+
+.desc__item-text {
+  font-size: 18px;
+  margin-bottom: 0;
+  line-height: 1.33;
+
+  @media (max-width: 767px) {
+    br {
+      display: none;
+    }
+  }
+}

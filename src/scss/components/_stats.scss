@@ -1,0 +1,138 @@
+.stats {
+  min-height: 998px;
+  @include bg;
+  background-image: url('/src/img/bgs/stats-bg.jpg');
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+  @media (max-width: 1450px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
+
+.stats__title {
+  @include title;
+  @include max-width(812px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  text-align: center;
+
+  span {
+    color: white;
+  }
+}
+
+.stats__text {
+  font-size: 20px;
+  line-height: 1.5;
+  @include max-width(564px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 115px;
+  text-align: center;
+  color: white;
+
+  @media (max-width: 1450px) {
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 15px;
+  }
+}
+
+.stats__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 50px;
+
+  @media (max-width: 1450px) {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 1020px) {
+    @include max-width(480px);
+  }
+}
+
+.stats__item {
+  min-height: 192.5px;
+  @include max-width(480px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  @media (max-width: 1020px) {
+    min-height: 140.5px;
+  }
+
+  &:nth-child(2) {
+    position: relative;
+
+    @media (max-width: 1450px) {
+      display: none;
+    }
+
+    &::before {
+      position: absolute;
+      content: url('/src/img/stats-photo.png');
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0px;
+
+      @media (max-width: 1450px) {
+        content: none;
+      }
+    }
+  }
+}
+
+.stats__item-title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  text-align: center;
+  color: $red;
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.stats__item-text {
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 0;
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+
+    br {
+      display: none;
+    }
+  }
+}

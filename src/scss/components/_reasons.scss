@@ -1,0 +1,188 @@
+.reasons {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-image: url('/src/img/bgs/reasons-bg.png');
+  background-repeat: repeat-x;
+  background-position: center bottom;
+
+  @media (max-width: 1450px) {
+    padding-top: 60px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 40px;
+  }
+
+  @media (max-width: 575px) {
+    padding-bottom: 100px;
+  }
+}
+
+.reasons__title {
+  @include title;
+  @include max-width(750px);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 64px;
+
+  span {
+    color: $red;
+  }
+}
+
+.reasons__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 70px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+}
+
+.reasons__item {
+  @include max-width(710px);
+  min-height: 528px;
+  border-radius: 40px;
+  padding-top: 54px;
+  padding-bottom: 54px;
+  padding-left: 62px;
+  padding-right: 55px;
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: 575px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &::before {
+    position: absolute;
+    font-size: 500px;
+    font-weight: bold;
+    left: -33px;
+    top: 86px;
+    color: rgba(0, 0, 0, 0.05);
+    height: 350px;
+    line-height: 350px;
+  }
+
+  &:nth-child(1) {
+    background-color: #d2f8a9;
+
+    &::before {
+      content: '1';
+    }
+  }
+  &:nth-child(2) {
+    overflow: visible;
+    @include bg;
+    background-image: url('/src/img/reasons-foot.png');
+
+    &::after {
+      content: url('/src/img/reasons-flowers.png');
+      right: -170px;
+      top: -150px;
+      position: absolute;
+
+      @media (max-width: 767px) {
+        content: none;
+      }
+    }
+  }
+  &:nth-child(3) {
+    background-color: rgba(#d2f8a9, 0.5);
+
+    &::before {
+      content: '2';
+    }
+  }
+  &:nth-child(4) {
+    background-color: rgba(#d2f8a9, 0.25);
+
+    &::before {
+      content: '3';
+    }
+  }
+}
+
+.reasons__item-title {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 1.43;
+  position: relative;
+  display: inline-block;
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -920px;
+    width: 900px;
+    height: 16px;
+    background-color: $blue;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.reasons__item-text {
+  font-size: 21px;
+  line-height: 1.43;
+  margin-bottom: 30px;
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.reasons__text {
+  @include max-width(995px);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  margin-bottom: 66px;
+  position: relative;
+
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 20px;
+  }
+
+  &::after {
+    position: absolute;
+    content: url('/src/img/reasons-slippers.png');
+    top: -289px;
+    right: -530px;
+
+    @media (max-width: 1450px) {
+      content: none;
+    }
+  }
+
+  span {
+    color: $red;
+    font-weight: bold;
+  }
+}

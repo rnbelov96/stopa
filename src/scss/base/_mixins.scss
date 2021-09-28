@@ -1,0 +1,52 @@
+@mixin bg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin reset-btn {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin reset-list {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+@mixin max-width($width) {
+  width: 100%;
+  max-width: $width;
+}
+
+@mixin central-align {
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+@mixin title {
+  font-family: 'Museo';
+  font-weight: 900;
+  font-size: 40px;
+  color: $blue;
+  text-transform: uppercase;
+
+  @media (max-width: 767px) {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+}

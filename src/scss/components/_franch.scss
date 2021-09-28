@@ -1,0 +1,267 @@
+.franch {
+  min-height: 1731px;
+  @include bg;
+  background-image: url('/src/img/bgs/franch-bg.jpg');
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 575px) {
+    padding-top: 30px;
+  }
+}
+
+.franch__title {
+  margin-top: 147px;
+  @include title;
+  margin-bottom: 65px;
+  position: relative;
+  text-align: center;
+
+  @media (max-width: 1450px) {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 575px) {
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+
+  &::before {
+    content: url('/src/img/franch-tube.png');
+    left: -425px;
+    top: -226px;
+    z-index: -1;
+    position: absolute;
+
+    @media (max-width: 1450px) {
+      content: none;
+    }
+  }
+
+  @media (max-width: 1450px) {
+    br {
+      display: none;
+    }
+  }
+
+  span {
+    color: white;
+  }
+}
+
+.franch__text-box {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 46px;
+
+  @media (max-width: 1450px) {
+    gap: 20px;
+  }
+
+  @media (max-width: 575px) {
+    margin-bottom: 25px;
+  }
+}
+
+.franch__text-item {
+  @include max-width(420px);
+  color: white;
+  font-size: 20px;
+  margin-bottom: 0;
+
+  @media (max-width: 920px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 16px;
+  }
+}
+
+.franch__note {
+  padding-top: 58px;
+  padding-bottom: 60px;
+  padding-left: 110px;
+  padding-right: 110px;
+  background-color: white;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 70px;
+
+  @media (max-width: 575px) {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  span {
+    font-weight: bold;
+    color: $red;
+  }
+
+  @media (max-width: 1450px) {
+    br {
+      display: none;
+    }
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  @media (max-width: 1200px) {
+    br {
+      display: none;
+    }
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+}
+
+.franch__list {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.franch__item {
+  @include max-width(470px);
+
+  @media (max-width: 1450px) {
+    &:nth-child(2) {
+      order: 1;
+    }
+    &:nth-child(1) {
+      order: 2;
+    }
+    &:nth-child(3) {
+      order: 3;
+    }
+  }
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) .franch__item-photo-box {
+      background: url('/src/img/gallery/franch/#{$i}.jpg');
+    }
+  }
+}
+
+.franch__item-card {
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  overflow: hidden;
+
+  @media (max-width: 575px) {
+    border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  }
+}
+
+.franch__item-text-box {
+  background-color: $blue;
+  padding-top: 56px;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-bottom: 60px;
+
+  @media (max-width: 575px) {
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+  }
+
+  &_small {
+    min-height: 287px;
+    position: relative;
+
+    @media (max-width: 575px) {
+      min-height: auto;
+    }
+
+    &::after {
+      content: '';
+      width: 80%;
+      height: 16px;
+      background-color: $red;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -8px;
+    }
+  }
+  &_big {
+    min-height: 412px;
+    position: relative;
+
+    @media (max-width: 575px) {
+      min-height: auto;
+    }
+
+    &::after {
+      content: '';
+      width: 80%;
+      height: 16px;
+      background-color: $red;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -8px;
+    }
+  }
+}
+
+.franch__item-title {
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 40px;
+  line-height: 1.5;
+
+  @media (max-width: 575px) {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+.franch__item-text {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  color: white;
+
+  @media (max-width: 575px) {
+    font-size: 16px;
+  }
+}
+
+.franch__item-photo-box {
+  min-height: 287px;
+  @include bg;
+}
+
+.franch__list-title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: white;
+  margin-bottom: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  @include max-width(370px);
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 575px) {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+}
