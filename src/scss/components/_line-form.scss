@@ -22,6 +22,40 @@
     }
   }
 
+  &_gains {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: url('/src/img/gains-photo.png');
+      left: 50%;
+      transform: translateX(-50%);
+      top: -180px;
+      z-index: -1;
+
+      @media (max-width: 1270px) {
+        content: none;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: url('/src/img/gains-form-grass.png');
+      top: -13px;
+      right: -260px;
+      z-index: 1;
+
+      @media (max-width: 1300px) {
+        content: none;
+      }
+    }
+
+    & button {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
   @media (max-width: 1200px) {
     padding-left: 30px;
     padding-right: 30px;

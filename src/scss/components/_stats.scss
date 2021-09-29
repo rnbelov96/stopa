@@ -58,6 +58,18 @@
   flex-wrap: wrap;
   background-color: white;
   border-radius: 50px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: url('/src/img/stats-hands.png');
+    right: -374px;
+    top: -185px;
+
+    @media (max-width: 1450px) {
+      content: none;
+    }
+  }
 
   @media (max-width: 1450px) {
     width: 960px;
