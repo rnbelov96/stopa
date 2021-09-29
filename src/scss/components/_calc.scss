@@ -1,0 +1,246 @@
+.calc {
+  min-height: 993px;
+  @include bg;
+  background-image: url('/src/img/bgs/calc-bg.jpg');
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+  @media (max-width: 1450px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    min-height: auto;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
+
+.calc__title {
+  @include title;
+  @include max-width(850px);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 70px;
+
+  span {
+    color: $red;
+  }
+}
+
+.calc__content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.calc__input-box {
+  margin-bottom: 23px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.calc__left-box,
+.calc__result-box {
+  @include max-width(700px);
+}
+
+.calc__label-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.calc__input-label {
+  color: $blue;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  font-weight: bold;
+  @include max-width(377px);
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+.calc__input-cost {
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: right;
+  margin-bottom: 0;
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+.calc__input {
+  width: 100%;
+  height: 10px;
+  margin-bottom: 14px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(
+    to right,
+    #46b594 0%,
+    #46b594 50%,
+    #eaf5f7 50%,
+    #eaf5f7 100%
+  );
+  background-color: #eaf5f7;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-thumb {
+    width: 34px;
+    height: 34px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #46b594;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  &::-moz-range-thumb {
+    width: 34px;
+    height: 34px;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #46b594;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  &::-ms-thumb {
+    width: 34px;
+    height: 34px;
+    appearance: none;
+    background-color: #46b594;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.calc__endpoints {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calc__endpoint {
+  font-size: 20px;
+  color: #46b594;
+  line-height: 1.5;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc__result-box {
+  min-height: 510px;
+  background-color: rgba(210, 248, 169, 0.5);
+  border-radius: 50px;
+  padding-top: 114px;
+  padding-bottom: 114px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  @media (max-width: 600px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: auto;
+  }
+}
+
+.calc__result-title {
+  @include max-width(375px);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #46b594;
+  margin-bottom: 20px;
+  font-family: 'Museo';
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 24px;
+
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
+}
+
+.calc__result {
+  font-size: 40px;
+  font-family: 'Museo';
+  font-weight: 900;
+  color: $blue;
+  text-align: center;
+  margin-bottom: 50px;
+
+  @media (max-width: 600px) {
+    font-size: 25px;
+  }
+
+  span {
+    font-size: 60px;
+
+    @media (max-width: 600px) {
+      font-size: 38px;
+    }
+  }
+}
