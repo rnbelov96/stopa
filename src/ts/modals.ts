@@ -9,7 +9,7 @@ const modalFormInfoList = [
     button: 'Получить консультацию',
   },
   {
-    title: 'на презентацию франшизы и финансовую модель',
+    title: 'на презентацию и финансовую модель франшизы',
     button: 'Получить презентацию',
   },
 ];
@@ -19,9 +19,13 @@ const closeModal = (modalEl: HTMLDivElement) => {
   modalEl.style.overflowY = 'inherit';
   modalEl.style.pointerEvents = 'none';
   document.body.style.overflowY = 'auto';
+  document.body.style.paddingRight = '0px';
 };
 
 const openModal = (modalEl: HTMLDivElement) => {
+  if (window.innerWidth > document.body.clientWidth) {
+    document.body.style.paddingRight = '15px';
+  }
   modalEl.style.opacity = '1';
   modalEl.style.overflowY = 'auto';
   modalEl.style.pointerEvents = 'auto';

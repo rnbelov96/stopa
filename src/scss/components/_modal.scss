@@ -58,6 +58,12 @@
     transition: background-color 0.25s ease 0s;
   }
 
+  &_form {
+    &::after {
+      right: 20px;
+    }
+  }
+
   &:hover,
   &:focus {
     &::after {

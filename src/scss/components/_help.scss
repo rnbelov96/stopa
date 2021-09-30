@@ -4,6 +4,8 @@
   background-image: url('/src/img/bgs/help-bg.jpg');
   padding-top: 150px;
   padding-bottom: 150px;
+  position: relative;
+  z-index: 2;
 
   @media (max-width: 1450px) {
     padding-top: 60px;
@@ -14,6 +16,10 @@
   @media (max-width: 767px) {
     padding-top: 35px;
     padding-bottom: 35px;
+  }
+
+  @media (max-width: 767px) {
+    background-image: none;
   }
 }
 
@@ -37,6 +43,10 @@
   flex-wrap: wrap;
   gap: 20px;
   margin-bottom: 70px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 35px;
+  }
 }
 
 .help__item {
@@ -47,8 +57,16 @@
   padding-left: 63px;
   padding-right: 66px;
   border-radius: 50px;
-
+  overflow: hidden;
   background-color: rgba(210, 242, 255, 0.95);
+
+  @media (max-width: 575px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: auto;
+  }
 
   &:nth-child(2),
   &:nth-child(3) {
@@ -56,7 +74,7 @@
   }
 }
 
-.help__title {
+.help__item-title {
   display: inline-block;
   margin-bottom: 33px;
   text-transform: uppercase;
@@ -64,14 +82,66 @@
   line-height: 1.43;
   font-weight: bold;
   position: relative;
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  &::after {
+    position: absolute;
+    width: 500px;
+    right: -526px;
+    height: 16px;
+    background-color: #1f7dc3;
+    top: 6px;
+    content: '';
+
+    @media (max-width: 575px) {
+      content: none;
+    }
+  }
+
+  &_green::after {
+    background-color: #46b594;
+  }
 }
 
-.help__text {
+.help__item-text {
   font-size: 21px;
   line-height: 1.43;
   margin-bottom: 33px;
 
+  @media (max-width: 575px) {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+.help__item-list {
+  @include reset-list;
+}
+
+.help__item-list-item {
+  padding-left: 15px;
+  font-size: 21px;
+  line-height: 1.43;
+  position: relative;
+
+  @media (max-width: 575px) {
+    font-size: 16px;
+  }
+
+  &::before {
+    content: '-';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 21px;
+    line-height: 1.43;
   }
 }

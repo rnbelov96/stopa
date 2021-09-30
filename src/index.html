@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Франшиза «»</title>
+    <title>Франшиза подологического центра Stopa</title>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.5.2/validator.min.js"
       integrity="sha512-vZEoK8xRncku4g5GANHh5zobUjeCMbZkSEahrADeAcRlk/1Ignf8sAKojkV4RZLkPw145+ILJFisI2pnjsPtGQ=="
@@ -716,7 +716,7 @@
                 <p class="calc__result">
                   <span class="js-calc-result">2 560 000</span> рублей
                 </p>
-                <button class="button button_calc">
+                <button class="button button_calc js-callback">
                   Зафиксировать прибыль
                 </button>
               </div>
@@ -824,7 +824,9 @@
               </ul>
             </li>
             <li class="help__item">
-              <p class="help__item-title">Дистанционное обучение</p>
+              <p class="help__item-title help__item-title_green">
+                Дистанционное обучение
+              </p>
               <p class="help__item-text">
                 Перед открытием франчайзинговый точки, вы пройдёте обучение и
                 узнаете, как администрировать центр, нанимать и обучать
@@ -833,7 +835,9 @@
               </p>
             </li>
             <li class="help__item">
-              <p class="help__item-title">Маркетинговая поддержка</p>
+              <p class="help__item-title help__item-title_green">
+                Маркетинговая поддержка
+              </p>
               <p class="help__item-text">
                 Продвижением вашего центра будет заниматься наш отдел
                 маркетинга. Привлекать клиентов будем в том числе и через
@@ -851,7 +855,7 @@
                 включает в себя протестированные и готовые для печати элементы:
               </p>
               <ul class="help__item-list">
-                <li class="help__item-list-item">- корпоративный мерч;</li>
+                <li class="help__item-list-item">корпоративный мерч;</li>
                 <li class="help__item-list-item">
                   макеты рекламных материалов;
                 </li>
@@ -859,9 +863,217 @@
               </ul>
             </li>
           </ul>
+          <form class="line-form">
+            <h3 class="line-form__title">
+              <span>Получить доступ</span> к презентации и финансовой модели
+              франшизы
+            </h3>
+            <div class="line-form__input-box">
+              <div class="line-form__input-list">
+                <input
+                  type="text"
+                  placeholder="Имя"
+                  name="name"
+                  data-type="name"
+                  class="line-form__input"
+                /><input
+                  type="text"
+                  placeholder="Телефон"
+                  name="phone"
+                  data-type="phone"
+                  class="line-form__input"
+                /><input
+                  type="email"
+                  placeholder="E-mail"
+                  name="email"
+                  data-type="email"
+                  class="line-form__input"
+                />
+              </div>
+              <button type="submit" class="button button_line-form">
+                Получить материалы
+              </button>
+            </div>
+            <p class="line-form__policy">
+              Я подтверждаю, что ознакомлен, и даю согласие на обработку
+              персональных данных на условиях и для целей, определяемых
+              <button type="button" class="js-policy">
+                Политикой конфиденциальности
+              </button>
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <section class="team">
+        <div class="container">
+          <h2 class="team__title">
+            <span>Команда профессионалов</span> будет и у вас!
+          </h2>
+          <p class="team__text">
+            Подологический центр STOPA обеспечивает
+            <b>2-этапное обучение</b> для ваших мастеров:
+          </p>
+          <ul class="team__list">
+            <li class="team__item">
+              <div class="team__item-img"></div>
+              <div class="team__item-text-box">
+                <p class="team__item-title">Базовый курс</p>
+                <p class="team__item-text">
+                  Теория и практика подологии с завершающим экзаменом для
+                  закрепления знаний и навыков. Продолжительность — 8 дней.
+                  Офлайн-формат. Возможен выезд для проведения обучения.
+                </p>
+                <p class="team__item-number">1</p>
+              </div>
+            </li>
+            <li class="team__item">
+              <div class="team__item-img"></div>
+              <div class="team__item-text-box">
+                <p class="team__item-title">
+                  Курсы повышения квалификации по обновлённым услугам
+                </p>
+                <p class="team__item-text">
+                  Обучение мастеров новым услугам — ортониксии, ортезирования, и
+                  другим методикам для увеличения количества предлагаемых услуг.
+                  Продолжительность — 5 дней. Доступны онлайн и офлайн-форматы.
+                </p>
+                <p class="team__item-number">2</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="discount">
+        <div class="container">
+          <h2 class="discount__title">
+            <span>Обеспечим корпоративной скидкой</span> <br />
+            на поставки расходных материалов и косметики
+          </h2>
+          <div class="discount__content">
+            <div class="discount__img-box">
+              <img
+                class="discount__img"
+                src="./img/discount-cream.png"
+                alt="Продукция"
+              />
+              <img src="./img/discount-icon.png" class="discount__logo" />
+            </div>
+            <div class="discount__text-box">
+              <p class="discount__text">
+                «Первый подологический центр STOPA» — официальный представитель
+                одного из поставщиков профессиональной продукции и оборудования.
+              </p>
+              <p class="discount__text">
+                Многолетнее сотрудничество даёт возможность закупать материалы и
+                косметику у поставщиков
+                <span
+                  >со скидкой <br />
+                  5–10%.</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="city">
+        <div class="container">
+          <h2 class="city__title">
+            Откройте «Первый подологический центр STOPA» <br />
+            в своём городе и
+            <span>
+              получайте прибыль <br />
+              от 200 000 рублей ежемесячно
+            </span>
+          </h2>
+          <p class="city__text city__text_top">
+            Гарантируем комплексную поддержку по каждому направлению, поэтому
+            число франчайзинговых точек ограничено.
+          </p>
+          <p class="city__text city__text_bottom">
+            <b>Запустим только 10 партнёров в 2021 году</b> — успейте
+            присоединиться к нам и попасть в число лидеров. Оставьте заявку,
+            чтобы проверить свободные места и занять свой город.
+          </p>
+          <form class="line-form">
+            <h3 class="line-form__title">
+              Проверьте, <span>свободен ли ваш город</span> для сотрудничества
+            </h3>
+            <div class="line-form__input-box">
+              <div class="line-form__input-list">
+                <input
+                  type="text"
+                  placeholder="Имя"
+                  name="name"
+                  data-type="name"
+                  class="line-form__input"
+                /><input
+                  type="text"
+                  placeholder="Телефон"
+                  name="phone"
+                  data-type="phone"
+                  class="line-form__input"
+                /><input
+                  type="email"
+                  placeholder="E-mail"
+                  name="email"
+                  data-type="email"
+                  class="line-form__input"
+                />
+              </div>
+              <button type="submit" class="button button_line-form">
+                Проверить свой город
+              </button>
+            </div>
+            <p class="line-form__policy">
+              Я подтверждаю, что ознакомлен, и даю согласие на обработку
+              персональных данных на условиях и для целей, определяемых
+              <button type="button" class="js-policy">
+                Политикой конфиденциальности
+              </button>
+            </p>
+          </form>
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <img
+            src="./img/icons/footer-logo.png"
+            alt="Логотип компании"
+            class="footer__logo"
+          />
+          <div class="footer__info-box">
+            <p class="footer__company-name">
+              ИП Санжихаева Туяна Леонидовна <br />
+              ИНН 032355297900
+            </p>
+            <button class="footer__policy js-policy">
+              Политика конфиденциальности</button
+            ><a href="https://франчайзинг5.рф" class="footer__franch"
+              ><span>Франчайзинг 5</span> - упаковка и продвижение франшиз</a
+            >
+          </div>
+          <div class="footer__contact-box">
+            <a href="tel:+" class="footer__phone">8 (900) 789-78-89</a>
+            <div class="footer__insta-box">
+              <img src="./img/icons/insta.png" class="footer__insta-img" /><a
+                href="https://www.instagram.com/stopa.med/"
+                class="footer__insta-link"
+                >@stopa.med</a
+              >
+            </div>
+            <a href="https://www.podoprofi03.com" class="footer__cite-link"
+              >www.podoprofi03.com</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <div class="modal">
       <div class="modal__center-wrapper">
@@ -869,12 +1081,42 @@
           <h3 class="modal-form__title">
             Оставьте заявку <span class="js-modal-form-title"></span>
           </h3>
-          <button class="button button_modal-form js-modal-form-btn">
-            Получить документацию
-          </button>
+          <div class="modal-form__input-box">
+            <div class="modal-form__input-list">
+              <input
+                type="text"
+                placeholder="Имя"
+                name="name"
+                data-type="name"
+                class="modal-form__input"
+              /><input
+                type="text"
+                placeholder="Телефон"
+                name="phone"
+                data-type="phone"
+                class="modal-form__input"
+              /><input
+                type="email"
+                placeholder="E-mail"
+                name="email"
+                data-type="email"
+                class="modal-form__input"
+              />
+            </div>
+            <button type="submit" class="button button_modal-form js-modal-form-btn">
+              Проверить свой город
+            </button>
+          </div>
+          <p class="modal-form__policy">
+            Я подтверждаю, что ознакомлен, и даю согласие на обработку
+            персональных данных на условиях и для целей, определяемых
+            <button type="button" class="js-policy">
+              Политикой конфиденциальности
+            </button>
+          </p>
           <button
             data-modal-close=""
-            class="modal__close"
+            class="modal__close modal__close_form"
             title="Закрыть"
             type="button"
           ></button>
@@ -902,8 +1144,7 @@
           <li class="priv-policy__item">
             2. Настоящая политика Оператора в отношении обработки персональных
             данных (далее – Политика) применяется ко всей информации, которую
-            Оператор может получить о посетителях веб-сайта компании «Hot
-            Chiken».
+            Оператор может получить о посетителях веб-сайта компании STOPA.
           </li>
         </ol>
 
@@ -1029,7 +1270,7 @@
             новых продуктах и услугах, специальных предложениях и различных
             событиях. Пользователь всегда может отказаться от получения
             информационных сообщений, направив Оператору письмо на адрес
-            электронной почты с доменом hotchicken18@yandex.ru с пометкой «Отказ
+            электронной почты с доменом email@yandex.ru с пометкой «Отказ
             от уведомлений о новых продуктах и услугах и специальных
             предложениях».
           </li>
@@ -1137,19 +1378,6 @@
           class="modal__close"
           title="Закрыть"
         ></button>
-      </div>
-    </div>
-    <div class="modal modal_video js-video-adv">
-      <div class="modal__center-wrapper">
-        <iframe
-          width="560"
-          height="315"
-          class="modal__video"
-          src="https://www.youtube.com/embed/p7-GpwMAnck"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
       </div>
     </div>
   </body>

@@ -39,6 +39,18 @@
   margin-bottom: 64px;
   font-size: 20px;
   line-height: 1.5;
+  position: relative;
+
+  &::after {
+    content: url('/src/img/steps-baloons.png');
+    position: absolute;
+    top: 640px;
+    right: -905px;
+
+    @media (max-width: 1450px) {
+      content: none;
+    }
+  }
 
   @media (max-width: 767px) {
     margin-bottom: 30px;

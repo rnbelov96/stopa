@@ -32,6 +32,10 @@
   position: relative;
   left: -116px;
 
+  &_thanks {
+    left: 0px;
+  }
+
   @media (max-width: 1300px) {
     left: 0px;
   }
