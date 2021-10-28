@@ -1,6 +1,6 @@
 .desc {
   min-height: 753px;
-  background-image: url('/src/img/bgs/desc-bg.png');
+  background-image: url('/src/img/bgs/desc-bg-1.png');
 
   @media (max-width: 1060px) {
     min-height: auto;
@@ -10,7 +10,7 @@
 
 .desc__title {
   padding-top: 52px;
-  @include max-width(860px);
+  @include max-width(936px);
   margin-bottom: 47px;
   font-family: 'Museo';
   font-weight: 900;
@@ -33,17 +33,18 @@
   }
 
   &::after {
-    content: url('/src/img/desc-photo.png');
+    content: url('/src/img/desc-note.png');
     position: absolute;
-    top: -90px;
-    right: -700px;
+    top: 22px;
+    right: -354px;
     z-index: -1;
 
     @media (max-width: 1300px) {
-      top: -30px;
+      top: 21px;
+      right: -186px;
     }
 
-    @media (max-width: 1060px) {
+    @media (max-width: 1100px) {
       content: none;
     }
   }

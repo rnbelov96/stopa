@@ -127,7 +127,7 @@
 }
 
 .help__item-list-item {
-  padding-left: 15px;
+  padding-left: 29px;
   font-size: 21px;
   line-height: 1.43;
   position: relative;
@@ -137,11 +137,15 @@
   }
 
   &::before {
-    content: '-';
+    content: '—';
     position: absolute;
     left: 0px;
     top: 0px;
     font-size: 21px;
     line-height: 1.43;
+
+    @media (max-width: 575px) {
+      top: -4px;
+    }
   }
 }
