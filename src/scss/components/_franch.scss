@@ -2,12 +2,13 @@
   min-height: 1731px;
   @include bg;
   background-image: url('/src/img/bgs/franch-bg.jpg');
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   position: relative;
   z-index: 1;
 
   @media (max-width: 575px) {
     padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
@@ -48,6 +49,15 @@
 
   span {
     color: white;
+  }
+
+  &_bottom {
+    margin-top: 0;
+    color: white;
+
+    &::before {
+      content: none;
+    }
   }
 }
 
@@ -129,6 +139,7 @@
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
+  align-items: flex-end;
 }
 
 .franch__item {
@@ -136,13 +147,13 @@
 
   @media (max-width: 1450px) {
     &:nth-child(2) {
-      order: 1;
+      order: 3;
     }
     &:nth-child(1) {
-      order: 2;
+      order: 1;
     }
     &:nth-child(3) {
-      order: 3;
+      order: 2;
     }
   }
 
@@ -169,7 +180,7 @@
   padding-top: 56px;
   padding-left: 55px;
   padding-right: 55px;
-  padding-bottom: 60px;
+  padding-bottom: 45px;
 
   @media (max-width: 575px) {
     padding-top: 30px;

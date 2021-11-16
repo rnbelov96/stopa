@@ -33,18 +33,23 @@
   }
 
   &::after {
-    content: url('/src/img/desc-note.png');
+    content: url('/src/img/desc-note.svg');
     position: absolute;
-    top: 22px;
-    right: -354px;
+    top: 41px;
+    right: -579px;
     z-index: -1;
+    width: 409px;
 
-    @media (max-width: 1300px) {
-      top: 21px;
-      right: -186px;
+    @media (max-width: 1600px) {
+      right: -436px;
     }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1400px) {
+      right: -330px;
+      width: 300px;
+    }
+
+    @media (max-width: 1300px) {
       content: none;
     }
   }
