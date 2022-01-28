@@ -1,5 +1,5 @@
 document.f5leads = {};
-document.f5leads.emails = 'Krd193@mail.franch5.ru'; // comma separated
+document.f5leads.emails = 'Krd193@mail.franch5.ru, stopafranch@yandex.ru'; // comma separated
 document.f5leads.send_to_bitrix = 'false';
 document.f5leads.expect_second_form = '0';
 document.f5leads.counterId = '';
